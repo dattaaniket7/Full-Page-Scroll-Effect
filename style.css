@@ -1,0 +1,48 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	color: gainsboro;
+}
+
+body {
+	height: 100vh;
+}
+
+section {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	scroll-snap-align: start;
+}
+.container {
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	height: 100%;
+	display: grid;
+	width: 100%;
+	grid-template-rows: 100% 100% 100% 100%;
+}
+
+.one {
+	background: #d72638;
+}
+.two {
+	background: #07393c;
+}
+.three {
+	background: #ff570a;
+}
+.four {
+	background: #370031;
+}
+
+@media only screen and (max-device-width: 480px) {
+	.container {
+		scroll-snap-type: x mandatory;
+		overflow-x: auto;
+		grid-template-columns: 100% 100% 100% 100%;
+	}
+}
